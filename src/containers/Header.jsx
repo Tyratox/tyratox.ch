@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { push } from "react-router-redux";
 import { Helmet } from "react-helmet";
 import { action as toggleBurgerMenuAction } from "redux-burger-menu";
-import MenuIcon from "react-icons/lib/md/menu";
+import { MdMenu as MenuIcon } from "react-icons/md";
 
 import { colors } from "../utilities/style";
 import {
@@ -28,8 +28,8 @@ const HeaderWrapper = styled.div`
 
   z-index: 100;
 
-  background-color: ${colors.primaryContrast};
-  color: ${colors.primaryLight};
+  background-color: ${colors.background};
+  color: ${colors.primary};
 `;
 
 /**
@@ -63,36 +63,27 @@ class Header extends React.PureComponent {
         <Navbar>
           <Container>
             <Flexbar>
-              <NavItem>
-                <Link to="/">Nico Hauser</Link>
-              </NavItem>
+              <NavItem>Nico Hauser</NavItem>
               <Push left>
                 <MediaQuery md up>
                   <NavItem>
-                    <Link to="/">Startseite</Link>
+                    <Link to="/" color="#3498DB">
+                      Projects
+                    </Link>
+                  </NavItem>
+                  {/*<NavItem>
+                    <Link to="/algorithms" color="#F8E81C">
+                      Code
+                    </Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="/algorithms">Algorithmen</Link>
-                  </NavItem>
+                    <Link to="/blog" color="#F39C12">
+                      Blog
+                    </Link>
+                  </NavItem>*/}
                   <NavItem>
-                    <Link to="/blog">Blog</Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link to="/page/about">Verein</Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link
-                      onClick={() => {
-                        window.location =
-                          "mailto:" +
-                          "siul"
-                            .split("")
-                            .reverse()
-                            .join("") +
-                          "@klama.uk";
-                      }}
-                    >
-                      Kontakt
+                    <Link to="/about" color={"#F39C12" /*"#1ABC9C"*/}>
+                      About me
                     </Link>
                   </NavItem>
                 </MediaQuery>

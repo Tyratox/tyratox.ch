@@ -3,10 +3,9 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 import { elastic as Menu } from "react-burger-menu";
 import { decorator as reduxBurgerMenu } from "redux-burger-menu";
-import HomeIcon from "react-icons/lib/fa/home";
-import BlogIcon from "react-icons/lib/io/social-rss";
-import GroupIcon from "react-icons/lib/io/ios-people";
-import ContactIcon from "react-icons/lib/io/android-chat";
+import { FaHome } from "react-icons/fa";
+import { IoLogoRss as BlogIcon } from "react-icons/io";
+import { FaComment as ContactIcon, FaInfoCircle } from "react-icons/fa";
 
 import Link from "../components/Link";
 import { getIsAuthenticated } from "../reducers";
@@ -43,20 +42,14 @@ class BurgerMenu extends React.PureComponent {
         <BurgerList>
           <BurgerItem>
             <Link to="/" negative flex>
-              <HomeIcon />
-              Events
+              <FaHome />
+              Projects
             </Link>
           </BurgerItem>
           <BurgerItem>
-            <Link to="/blog" negative flex>
-              <BlogIcon />
-              Blog
-            </Link>
-          </BurgerItem>
-          <BurgerItem>
-            <Link to="/page/about" negative flex>
-              <GroupIcon />
-              Verein
+            <Link to="/about" negative flex>
+              <FaInfoCircle />
+              About me
             </Link>
           </BurgerItem>
           <BurgerItem>
@@ -64,17 +57,17 @@ class BurgerMenu extends React.PureComponent {
               onClick={() => {
                 window.location =
                   "mailto:" +
-                  "siul"
+                  "em"
                     .split("")
                     .reverse()
                     .join("") +
-                  "@klama.uk";
+                  "@tyratox.ch";
               }}
               negative
               flex
             >
               <ContactIcon />
-              Kontakt
+              Contact
             </Link>
           </BurgerItem>
         </BurgerList>

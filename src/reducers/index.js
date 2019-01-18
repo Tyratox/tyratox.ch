@@ -8,6 +8,7 @@ import attachment, * as fromAttachment from "./attachment";
 import page, * as fromPage from "./page";
 import post, * as fromPost from "./post";
 import algorithm, * as fromAlgorithm from "./algorithm";
+import project, * as fromProject from "./project";
 import eventType, * as fromEventType from "./event-type";
 
 /**
@@ -70,6 +71,15 @@ export const getAlgorithms = wrap(
   state => state.algorithm
 );
 
+export const getProjectBySlug = wrap(
+  fromProject.getProjectBySlug,
+  state => state.project
+);
+export const getProjects = wrap(
+  fromProject.getProjects,
+  state => state.project
+);
+
 export const getEventTypeById = wrap(
   fromEventType.getEventTypeById,
   state => state.eventType
@@ -87,5 +97,6 @@ export default combineReducers({
   page,
   post,
   algorithm,
+  project,
   eventType
 });

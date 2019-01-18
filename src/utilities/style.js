@@ -1,11 +1,9 @@
 import { css } from "styled-components";
 
 export const colors = {
-  primaryDark: "#0B1824",
-  primary: "#24387D",
-  primaryLight: "#324C8E",
+  primary: "#1ABC9C",
   primaryContrast: "#ffffff",
-  background: "#f5f5f5",
+  background: "#2C3E50",
   backgroundContrast: "#ffffff",
   accent: "#BF262E",
   accentLight: "#DF4C44",
@@ -18,6 +16,11 @@ export const colors = {
   info: "#3498db",
   warning: "#FCBF37",
   danger: "#e74c3c"
+};
+
+export const borders = {
+  radius: "5px",
+  inputRadius: "3px"
 };
 
 export const shadows = {

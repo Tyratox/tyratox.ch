@@ -41,6 +41,10 @@ const mapStateToProps = state => ({
   algorithms: getAlgorithms(state)
 });
 const mapDispatchToProps = dispatch => ({
+  /**
+   * Fetches the latest algorithms
+   * @returns {Promise} the fetch promise
+   */
   fetchLatest() {
     return dispatch(fetchLatestAlgorithms());
   }

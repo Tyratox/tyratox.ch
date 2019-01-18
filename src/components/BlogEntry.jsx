@@ -15,7 +15,7 @@ const EntryWrapper = styled(Container)`
   margin: 1rem auto;
   padding: 0;
 
-  color: ${colors.primaryLight};
+  color: ${colors.primary};
   background-color: ${colors.backgroundContrast};
 
   word-break: break-word;

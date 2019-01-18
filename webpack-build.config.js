@@ -35,7 +35,7 @@ module.exports = {
   output: {
     path: path.join(context, "build/"),
     filename: "[name].[chunkhash].js",
-    publicPath: "/wp-content/themes/klama.uk/"
+    publicPath: "/wp-content/themes/tyratox/"
   },
 
   optimization: {
@@ -113,13 +113,13 @@ module.exports = {
         to: "./",
         toType: "dir"
       }
-    ]),
-    new FaviconsWebpackPlugin({
+    ])
+    /*new FaviconsWebpackPlugin({
       logo: "./img/logo-favicon.png",
       persistentCache: true,
       background: "#fff",
       title: "Nico Hauser"
-    })
+    })*/
   ],
 
   resolve: {
