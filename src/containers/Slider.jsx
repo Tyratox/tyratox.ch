@@ -126,11 +126,11 @@ class Slider extends React.PureComponent {
               </Parallax>
             </MoonImg>
           </MediaQuery>
-          <EarthImg>
+          {/*<EarthImg>
             <Parallax offsetYMin={-40} offsetYMax={50} slowerScrollRate>
               <img src={Earth} />
             </Parallax>
-          </EarthImg>
+          </EarthImg>*/}
           <MediaQuery lg up>
             <MeteorImg>
               <Parallax
@@ -164,6 +164,6 @@ class Slider extends React.PureComponent {
   };
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = (state) => ({});
 
 export default connect(mapStateToProps)(Slider);
