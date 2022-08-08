@@ -1,26 +1,25 @@
-# Keep these files out of the repo
-*.sql
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-#IDEs
-.idea
-.vscode
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-#npm
-node_modules
+# testing
+/coverage
 
-# Hidden files
-*.DS_Store
-*Thumbs.db
-*.sass-cache*
-*~imageoptim*
+# next.js
+/.next/
+/out/
 
+# production
 /build
 
-#db structure
-!react-dashboard/db-structure/*.sql
+# misc
+.DS_Store
+.env*
 
-src/config.json
-.env
-
-#log files
-*.log
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
