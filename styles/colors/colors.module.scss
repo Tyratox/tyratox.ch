@@ -1,5 +1,25 @@
-$primary: #000;
+$background-light: #F5CD79;
+$background-dark: #596275;
+
+$foreground-light: #fff;
+$foreground-dark: #fff;
+
+:root {
+  --background-color: #{$background-light};
+  --foreground-color: #{$foreground-light};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #{$background-dark};
+    --foreground-color: #{$foreground-dark};
+  }
+}
 
 :export {
-  primary: $primary;
+  backgroundLight: $background-light;
+  backgroundDark: $background-dark;
+
+  foregroundLight: $foreground-light;
+  foregroundDark: $foreground-dark;
 }

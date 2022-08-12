@@ -7,7 +7,7 @@ import { siteTitle } from "../data/site";
 
 export default function Home() {
   return (
-    <Wrapper home>
+    <Wrapper>
       <Head>
         <title>{siteTitle}</title>
       </Head>
