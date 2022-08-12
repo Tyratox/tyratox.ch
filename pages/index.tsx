@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
+import BlueprintBook from "../components/blueprints/BlueprintBook";
 import BlueprintLaptop from "../components/blueprints/BlueprintLaptop";
 import HoverBackground from "../components/HoverBackground";
 import Wrapper from "../components/Wrapper";
@@ -49,7 +50,7 @@ export default function Home() {
         <SectionLink>
           <SectionImage>
             <HoverBackground />
-            <Image src="/images/index/book.svg" width={159} height={204} />
+            <BlueprintBook height={204} />
           </SectionImage>
         </SectionLink>
         <SectionLink>
