@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
+import BlueprintLaptop from "../components/blueprints/BlueprintLaptop";
 import HoverBackground from "../components/HoverBackground";
 import Wrapper from "../components/Wrapper";
 import { siteTitle } from "../data/site";
@@ -42,7 +43,7 @@ export default function Home() {
         <SectionLink>
           <SectionImage>
             <HoverBackground />
-            <Image src="/images/index/laptop.svg" width={227} height={194} />
+            <BlueprintLaptop height={194} />
           </SectionImage>
         </SectionLink>
         <SectionLink>

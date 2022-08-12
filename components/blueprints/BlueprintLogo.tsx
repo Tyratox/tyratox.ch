@@ -53,13 +53,16 @@ const CircleStroke = styled.circle`
 `;
 
 interface IProps {
-  viewBox: string;
   height: number;
 }
 
-const BlueprintLogo = ({ viewBox, height }: IProps) => {
+const BlueprintLogo = ({ height }: IProps) => {
   return (
-    <Wrapper h={height} xmlns="http://www.w3.org/2000/svg" viewBox={viewBox}>
+    <Wrapper
+      h={height}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 500 500"
+    >
       <g fill="none" fillRule="evenodd">
         <CircleStroke cx="250" cy="250" r="66" stroke="#FFF" strokeWidth="10" />
         <CircleStroke

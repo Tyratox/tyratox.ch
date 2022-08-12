@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import Head from "next/head";
-import Image from "next/image";
 import React from "react";
 
 import BlueprintLogo from "./blueprints/BlueprintLogo";
@@ -60,7 +59,7 @@ export default function Wrapper({ children }) {
           <FlexGrow align="right">
             {/* 1rem = 18px, 18px * 12 = 216px = 12 rem*/}
             {/*<Image src="/images/logo-white.svg" width="180" height="180" />*/}
-            <BlueprintLogo viewBox="0 0 500 500" height={12} />
+            <BlueprintLogo height={12} />
           </FlexGrow>
           <VerticalLine height={10} />
           <FlexGrow align="left">
