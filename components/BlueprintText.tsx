@@ -27,13 +27,13 @@ const Text = styled.text`
   fill: rgba(255, 255, 255, 0);
   stroke: #fff;
   stroke-width: 0.5px;
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
   stroke-linecap: square;
   stroke-linejoin: miter;
 
   animation: ${strokeText} 3s both ease-in-out,
-    ${fillText} 0.5s 1s both ease-in-out;
+    ${fillText} 0.5s 2s both ease-in-out;
 `;
 
 interface IProps {
@@ -44,8 +44,7 @@ interface IProps {
 
 const BlueprintText = ({ text, viewBox, height }: IProps) => {
   return (
-    <Wrapper h={height} viewBox={viewBox}>
-      {/* Transparent copy of text to keep patterned text selectable */}
+    <Wrapper h={height} xmlns="http://www.w3.org/2000/svg" viewBox={viewBox}>
       <Text textAnchor="middle" x="50%" y="100%" dy="-0.25em">
         {text}
       </Text>
