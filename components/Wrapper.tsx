@@ -1,11 +1,9 @@
 import styled from "@emotion/styled";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
-import { myName, siteTitle } from "../data/site";
-import { Color } from "../styles/colors";
+import BlueprintText from "./BlueprintText";
 import Container from "./Container";
 import HorizontalLine from "./HorizontalLine";
 import VerticalLine from "./VerticalLine";
@@ -65,15 +63,20 @@ export default function Wrapper({ children }) {
           <VerticalLine height={10} />
           <FlexGrow align="left">
             <Name>
-              <h1>nico hauser</h1>
-              <h1>@tyratox</h1>
+              <BlueprintText
+                text="nico hauser"
+                viewBox="0 0 200 40"
+                height={4}
+              />
+              <BlueprintText text="@tyratox" viewBox="0 0 150 40" height={4} />
             </Name>
           </FlexGrow>
         </Header>
-        <HorizontalLine />
       </Container>
       <Container>
+        <HorizontalLine />
         <main>{children}</main>
+        <HorizontalLine />
       </Container>
     </div>
   );
