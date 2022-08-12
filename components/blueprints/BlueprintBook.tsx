@@ -73,6 +73,13 @@ const RectWhite = styled.rect`
     ${fillAnimationWhite} 0.5s 1s both ease-in-out;
 `;
 
+const RectWhiteStroke = styled.rect`
+  ${sharedSvgAnimationStyles}
+  stroke-width: 5px;
+
+  animation: ${strokeAnimation} 3s both ease-in-out;
+`;
+
 const RectGray1 = styled(RectWhite)`
   stroke: #efefef;
 
@@ -85,12 +92,6 @@ const RectGray2 = styled(RectWhite)`
 
   animation: ${strokeAnimation} 3s both ease-in-out,
     ${fillAnimationGray2} 0.5s 1s both ease-in-out;
-`;
-
-const RectStroke = styled.rect`
-  ${sharedSvgAnimationStyles}
-
-  animation: ${strokeAnimation} 3s both ease-in-out;
 `;
 
 interface IProps {
@@ -123,7 +124,7 @@ const BlueprintBook = ({ height }: IProps) => {
         />
         <RectWhite width="149" height="194" fill="#FFF" rx="15" />
         <rect width="22" height="194" x="0" y="0" rx="11" fill="#F5CD79" />
-        <rect
+        <RectWhiteStroke
           width="17"
           height="189"
           x="2.5"

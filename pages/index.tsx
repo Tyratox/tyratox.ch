@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import Head from "next/head";
-import Image from "next/image";
 import React from "react";
 
 import BlueprintBook from "../components/blueprints/BlueprintBook";
+import BlueprintContact from "../components/blueprints/BlueprintContact";
 import BlueprintLaptop from "../components/blueprints/BlueprintLaptop";
 import HoverBackground from "../components/HoverBackground";
 import Wrapper from "../components/Wrapper";
@@ -15,7 +15,7 @@ const Sections = styled.section`
   justify-content: space-between;
   align-items: center;
 
-  margin: 8rem 0;
+  padding: 8rem 0;
 `;
 
 const SectionImage = styled.div`
@@ -56,7 +56,7 @@ export default function Home() {
         <SectionLink>
           <SectionImage>
             <HoverBackground />
-            <Image src="/images/index/contact.svg" width={174} height={216} />
+            <BlueprintContact height={216} />
           </SectionImage>
         </SectionLink>
       </Sections>

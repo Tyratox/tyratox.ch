@@ -36,6 +36,10 @@ const Name = styled.div`
   }
 `;
 
+const Body = styled.div`
+  overflow: hidden;
+`;
+
 export default function Wrapper({ children }) {
   return (
     <div>
@@ -74,11 +78,13 @@ export default function Wrapper({ children }) {
           </FlexGrow>
         </Header>
       </Container>
-      <Container>
-        <HorizontalLine />
-        <main>{children}</main>
-        <HorizontalLine />
-      </Container>
+      <Body>
+        <Container>
+          <HorizontalLine />
+          <main>{children}</main>
+          <HorizontalLine />
+        </Container>
+      </Body>
     </div>
   );
 }
