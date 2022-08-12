@@ -1,4 +1,4 @@
-import { keyframes } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import React from "react";
 
@@ -27,16 +27,51 @@ const StyledHoverBackground = styled.svg`
   .outer-orbit {
     position: relative;
     transform-origin: 50% 50%;
-    /*animation: ${rotate} 10s linear infinite;*/
+    animation: ${rotate} 10s linear infinite;
   }
 
   .inner-orbit {
     position: relative;
     transform-origin: 0% 0%;
-    /*animation: ${rotate} 10s linear infinite;*/
+    animation: ${rotate} 10s linear infinite;
   }
 
-  opacity: 0;
+  display: none;
+`;
+
+const strokeAnimation = keyframes`
+  100% {
+    stroke-dashoffset: 0;
+  }
+`;
+
+const fillAnimation = keyframes`
+  100% {
+    fill: rgba(255,255,255,1);
+  }
+`;
+
+const sharedSvgAnimationStyles = css`
+  fill: rgba(255, 255, 255, 0);
+  stroke: #fff;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+`;
+
+const Circle = styled.circle`
+  ${sharedSvgAnimationStyles}
+  stroke-width: 2px;
+
+  animation: ${strokeAnimation} 3s both ease-in-out,
+    ${fillAnimation} 0.5s 1s both ease-in-out;
+`;
+
+const CircleStroke = styled.circle`
+  ${sharedSvgAnimationStyles}
+
+  animation: ${strokeAnimation} 3s both ease-in-out;
 `;
 
 const HoverBackground = () => {
@@ -47,12 +82,18 @@ const HoverBackground = () => {
     >
       <g className="outer-orbit">
         <g fill="none" fillRule="evenodd">
-          <circle cx="200" cy="200" r="160" stroke="#FFF" strokeWidth="3" />
+          <CircleStroke
+            cx="200"
+            cy="200"
+            r="160"
+            stroke="#FFF"
+            strokeWidth="3"
+          />
           <g transform="translate(85, 85)">
             <g className="inner-orbit">
-              <ellipse cx="0" cy="0" stroke="#FFF" rx="35" ry="35" />
-              <ellipse cx="0" cy="0" fill="#FFF" rx="15" ry="15" />
-              <ellipse cx="-25" cy="-25" fill="#FFF" rx="5" ry="5" />
+              <CircleStroke cx="0" cy="0" stroke="#FFF" r="35" />
+              <Circle cx="0" cy="0" fill="#FFF" r="15" />
+              <Circle cx="-25" cy="-25" fill="#FFF" r="5" />
             </g>
           </g>
         </g>

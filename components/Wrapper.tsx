@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
-import BlueprintLogo from "./BlueprintLogo";
-import BlueprintText from "./BlueprintText";
+import BlueprintLogo from "./blueprints/BlueprintLogo";
+import BlueprintText from "./blueprints/BlueprintText";
 import Container from "./Container";
 import HorizontalLine from "./HorizontalLine";
 import VerticalLine from "./VerticalLine";

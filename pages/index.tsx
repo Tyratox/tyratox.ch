@@ -28,7 +28,7 @@ const SectionImage = styled.div`
 
 const SectionLink = styled.div`
   &:hover > div > svg {
-    opacity: 1;
+    display: block;
   }
 `;
 
