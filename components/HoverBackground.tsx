@@ -22,7 +22,7 @@ const StyledHoverBackground = styled.svg`
   width: 100%;
   height: auto;
 
-  transform: scale(2.5);
+  transform: scale(1.75);
 
   .outer-orbit {
     position: relative;

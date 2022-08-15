@@ -9,7 +9,7 @@ import HorizontalLine from "./HorizontalLine";
 import VerticalLine from "./VerticalLine";
 
 const Header = styled.header`
-  margin-top: 5rem;
+  margin-top: 2rem;
   position: relative;
 
   display: flex;
@@ -71,9 +71,13 @@ export default function Wrapper({ children }) {
               <BlueprintText
                 text="nico hauser"
                 viewBox="0 0 200 40"
-                height={4}
+                height={3.5}
               />
-              <BlueprintText text="@tyratox" viewBox="0 0 150 40" height={4} />
+              <BlueprintText
+                text="@tyratox"
+                viewBox="0 0 150 40"
+                height={3.5}
+              />
             </Name>
           </FlexGrow>
         </Header>
