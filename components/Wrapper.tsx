@@ -4,36 +4,25 @@ import React from "react";
 
 import BlueprintLogo from "./blueprints/BlueprintLogo";
 import BlueprintText from "./blueprints/BlueprintText";
+import Box from "./Box";
 import Container from "./Container";
+import Flex from "./Flex";
 import HorizontalLine from "./HorizontalLine";
 import VerticalLine from "./VerticalLine";
 
 const Header = styled.header`
+  width: 100%;
   margin-top: 2rem;
   position: relative;
 
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 `;
 
-const FlexGrow = styled.div<{ align: "left" | "right" }>`
-  flex-grow: 1;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: ${({ align }) =>
-    align === "left" ? "flex-start" : "flex-end"};
-
-  position: relative;
-`;
-
-const Name = styled.div`
-  h1 {
-    margin: 0;
-    font-weight: normal;
-    line-height: 1.4;
-  }
+const HeaderContainer = styled(Flex)`
+  align-self: center;
 `;
 
 const Body = styled.div`
@@ -60,26 +49,20 @@ export default function Wrapper({ children }) {
       </Head>
       <Container>
         <Header>
-          <FlexGrow align="right">
-            {/* 1rem = 18px, 18px * 12 = 216px = 12 rem*/}
-            {/*<Image src="/images/logo-white.svg" width="180" height="180" />*/}
-            <BlueprintLogo height={12} />
-          </FlexGrow>
-          <VerticalLine height={10} />
-          <FlexGrow align="left">
-            <Name>
-              <BlueprintText
-                text="nico hauser"
-                viewBox="0 0 200 40"
-                height={3.5}
-              />
-              <BlueprintText
-                text="@tyratox"
-                viewBox="0 0 150 40"
-                height={3.5}
-              />
-            </Name>
-          </FlexGrow>
+          <Box widths={[1, 1, 3 / 4, 3 / 5, 1 / 2]}>
+            <HeaderContainer>
+              <Box widths={[2 / 5, 2 / 5, 2 / 5, 2 / 5, 2 / 5]}>
+                <BlueprintLogo />
+              </Box>
+              <Box widths={[1 / 5, 1 / 5, 1 / 5, 1 / 5, 1 / 5]}>
+                <VerticalLine height={10} />
+              </Box>
+              <Box widths={[2 / 5, 2 / 5, 2 / 5, 2 / 5, 2 / 5]}>
+                <BlueprintText text="nico hauser" viewBox="0 0 200 40" />
+                <BlueprintText text="@tyratox" viewBox="0 0 200 40" />
+              </Box>
+            </HeaderContainer>
+          </Box>
         </Header>
       </Container>
       <Body>

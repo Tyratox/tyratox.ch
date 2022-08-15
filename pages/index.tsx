@@ -17,6 +17,8 @@ const Sections = styled(Flex)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  justify-content: center;
 `;
 
 const SectionImage = styled.div`
@@ -61,21 +63,21 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <Sections flexWrap="wrap">
-        <SectionLink widths={[1, 1 / 2, 1 / 2, 1 / 3, 1 / 3]}>
+        <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
           <Textbox>On what projects do I</Textbox>
           <SectionImage>
             <HoverBackground />
             <BlueprintLaptop />
           </SectionImage>
         </SectionLink>
-        <SectionLink widths={[1, 1 / 2, 1 / 2, 1 / 3, 1 / 3]}>
+        <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
           <Textbox>What did I</Textbox>
           <SectionImage>
             <HoverBackground />
             <BlueprintBook />
           </SectionImage>
         </SectionLink>
-        <SectionLink widths={[1, 1 / 2, 1 / 2, 1 / 3, 1 / 3]}>
+        <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
           <Textbox>How to get in</Textbox>
           <SectionImage>
             <HoverBackground />

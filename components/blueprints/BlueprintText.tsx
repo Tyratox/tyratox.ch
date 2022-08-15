@@ -14,9 +14,9 @@ const fillText = keyframes`
   }
 `;
 
-const Wrapper = styled.svg<{ h: number }>`
-  height: ${({ h }) => h}rem;
-  width: auto;
+const Wrapper = styled.svg`
+  width: 100%;
+  height: auto;
 
   display: block;
 `;
@@ -39,13 +39,16 @@ const Text = styled.text`
 interface IProps {
   text: string;
   viewBox: string;
-  height: number;
 }
 
-const BlueprintText = ({ text, viewBox, height }: IProps) => {
+const BlueprintText = ({ text, viewBox }: IProps) => {
   return (
-    <Wrapper h={height} xmlns="http://www.w3.org/2000/svg" viewBox={viewBox}>
-      <Text textAnchor="middle" x="50%" y="100%" dy="-0.25em">
+    <Wrapper
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={viewBox}
+      preserveAspectRatio="xMinYMid meet"
+    >
+      <Text textAnchor="left" x="0" y="100%" dy="-0.25em">
         {text}
       </Text>
     </Wrapper>

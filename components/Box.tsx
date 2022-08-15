@@ -5,7 +5,7 @@ import React from "react";
 import { MediaQuery } from "../styles/media";
 
 const MediaBox = styled.div<{
-  width: string;
+  w: string;
   widthSmall: string;
   widthMedium: string;
   widthLarge: string;
@@ -17,7 +17,7 @@ const MediaBox = styled.div<{
   position: relative;
   padding: ${({ padding }) => padding};
   margin: ${({ margin }) => margin};
-  width: ${({ defaultHidden, width }) => (defaultHidden ? "auto" : width)};
+  width: ${({ defaultHidden, w }) => (defaultHidden ? "auto" : w)};
   display: ${({ defaultHidden }) => (defaultHidden ? "hidden" : "block")};
 
   ${MediaQuery.minSmall} {
@@ -92,7 +92,7 @@ const Box: FunctionComponent<{
 
   return (
     <MediaBox
-      width={width}
+      w={width}
       widthSmall={widthSmall}
       widthMedium={widthMedium}
       widthLarge={widthLarge}

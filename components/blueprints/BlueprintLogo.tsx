@@ -14,9 +14,9 @@ const fillAnimation = keyframes`
   }
 `;
 
-const Wrapper = styled.svg<{ h: number }>`
-  height: ${({ h }) => h}rem;
-  width: auto;
+const Wrapper = styled.svg`
+  width: 100%;
+  height: auto;
 
   display: block;
 `;
@@ -52,17 +52,9 @@ const CircleStroke = styled.circle`
   animation: ${strokeAnimation} 3s both ease-in-out;
 `;
 
-interface IProps {
-  height: number;
-}
-
-const BlueprintLogo = ({ height }: IProps) => {
+const BlueprintLogo = () => {
   return (
-    <Wrapper
-      h={height}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 500 500"
-    >
+    <Wrapper xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
       <g fill="none" fillRule="evenodd">
         <CircleStroke
           cx="250"
