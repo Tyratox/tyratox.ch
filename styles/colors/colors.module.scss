@@ -4,13 +4,18 @@ $background-dark: #596275;
 $foreground-light: #fff;
 $foreground-dark: #fff;
 
-:root {
+html {
   --background-color: #{$background-light};
   --foreground-color: #{$foreground-light};
 }
 
+html.dark {
+  --background-color: #{$background-dark};
+  --foreground-color: #{$foreground-dark};
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  html {
     --background-color: #{$background-dark};
     --foreground-color: #{$foreground-dark};
   }
@@ -22,4 +27,16 @@ $foreground-dark: #fff;
 
   foregroundLight: $foreground-light;
   foregroundDark: $foreground-dark;
+}
+
+.fill-background {
+  fill: var(--background-color);
+}
+
+.stroke-background {
+  stroke: var(--background-color);
+}
+
+.stroke-foreground {
+  stroke: var(--foreground-color);
 }

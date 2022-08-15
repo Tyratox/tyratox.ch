@@ -25,7 +25,7 @@ const Text = styled.text`
   font-size: 2rem;
 
   fill: rgba(255, 255, 255, 0);
-  stroke: #fff;
+  stroke: var(--foreground-color);
   stroke-width: 0.5px;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;

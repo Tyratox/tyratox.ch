@@ -47,13 +47,13 @@ const strokeAnimation = keyframes`
 
 const fillAnimation = keyframes`
   100% {
-    fill: rgba(255,255,255,1);
+    fill: var(--foreground-color);
   }
 `;
 
 const sharedSvgAnimationStyles = css`
   fill: rgba(255, 255, 255, 0);
-  stroke: #fff;
+  stroke: var(--foreground-color);
   stroke-dasharray: 1500;
   stroke-dashoffset: 1500;
   stroke-linecap: square;
@@ -86,14 +86,19 @@ const HoverBackground = () => {
             cx="200"
             cy="200"
             r="160"
-            stroke="#FFF"
+            className="stroke-foreground"
             strokeWidth="3"
           />
           <g transform="translate(85, 85)">
             <g className="inner-orbit">
-              <CircleStroke cx="0" cy="0" stroke="#FFF" r="35" />
-              <Circle cx="0" cy="0" fill="#FFF" r="15" />
-              <Circle cx="-25" cy="-25" fill="#FFF" r="5" />
+              <CircleStroke
+                cx="0"
+                cy="0"
+                className="stroke-foreground"
+                r="35"
+              />
+              <Circle cx="0" cy="0" className="fill-foreground" r="15" />
+              <Circle cx="-25" cy="-25" className="fill-foreground" r="5" />
             </g>
           </g>
         </g>

@@ -11,6 +11,7 @@ body {
 
   background-color: var(--background-color);
   color: var(--foreground-color);
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
 
   margin: 0.5rem;
 }
