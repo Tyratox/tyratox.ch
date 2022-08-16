@@ -1,7 +1,6 @@
 @import "colors/colors.module.scss";
 @import "../node_modules/normalize.css/normalize";
 
-html,
 body {
   padding: 0;
   margin: 0;
@@ -12,8 +11,6 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
-
-  margin: 0.5rem;
 }
 
 * {

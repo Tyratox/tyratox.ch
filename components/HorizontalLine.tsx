@@ -17,7 +17,7 @@ const HorizontalLine = styled.hr<{ width?: number }>`
   border-left: none;
   border-right: none;
 
-  margin: 3rem 0;
+  margin: 2rem 0;
 
   animation: ${scaleIn} 2s linear forwards;
 `;

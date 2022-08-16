@@ -10,7 +10,7 @@ const strokeAnimation = keyframes`
 
 const fillAnimation = keyframes`
   100% {
-    fill: rgba(255,255,255,1);
+    fill: var(--foreground-color);
   }
 `;
 

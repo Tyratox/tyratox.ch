@@ -10,7 +10,7 @@ const strokeText = keyframes`
 
 const fillText = keyframes`
   100% {
-    fill: rgba(255,255,255,1);
+    fill: var(--foreground-color);
   }
 `;
 
