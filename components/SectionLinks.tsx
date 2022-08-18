@@ -5,7 +5,6 @@ import BlueprintBook from "./blueprints/BlueprintBook";
 import BlueprintContact from "./blueprints/BlueprintContact";
 import BlueprintLaptop from "./blueprints/BlueprintLaptop";
 import Box from "./Box";
-import Container from "./Container";
 import Flex from "./Flex";
 import HoverBackground from "./HoverBackground";
 
@@ -40,30 +39,28 @@ const SectionLink = styled(Box)`
 
 const SectionLinks = () => {
   return (
-    <Container>
-      <Sections flexWrap="wrap">
-        <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
-          <SectionImage>
-            <HoverBackground />
-            <BlueprintBook />
-          </SectionImage>
-        </SectionLink>
+    <Sections flexWrap="wrap">
+      <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
+        <SectionImage>
+          <HoverBackground />
+          <BlueprintBook />
+        </SectionImage>
+      </SectionLink>
 
-        <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
-          <SectionImage>
-            <HoverBackground />
-            <BlueprintLaptop />
-          </SectionImage>
-        </SectionLink>
+      <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
+        <SectionImage>
+          <HoverBackground />
+          <BlueprintLaptop />
+        </SectionImage>
+      </SectionLink>
 
-        <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
-          <SectionImage>
-            <HoverBackground />
-            <BlueprintContact />
-          </SectionImage>
-        </SectionLink>
-      </Sections>
-    </Container>
+      <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
+        <SectionImage>
+          <HoverBackground />
+          <BlueprintContact />
+        </SectionImage>
+      </SectionLink>
+    </Sections>
   );
 };
 export default SectionLinks;

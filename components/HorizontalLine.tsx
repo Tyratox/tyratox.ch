@@ -1,8 +1,5 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import React from "react";
-
-import Container from "./Container";
 
 const scaleIn = keyframes`
   from {
@@ -25,10 +22,4 @@ const HorizontalLine = styled.hr<{ width?: number }>`
   animation: ${scaleIn} 2s linear forwards;
 `;
 
-const ContainedHorizontalLine = () => (
-  <Container>
-    <HorizontalLine />
-  </Container>
-);
-
-export default ContainedHorizontalLine;
+export default HorizontalLine;

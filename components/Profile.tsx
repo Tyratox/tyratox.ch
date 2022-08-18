@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 
 import Box from "./Box";
-import Container from "./Container";
 import Flex from "./Flex";
 
 const CenteredFlex = styled(Flex)`
@@ -24,7 +23,7 @@ const CenteredText = styled.div`
 
 const Profile = () => {
   return (
-    <Container>
+    <>
       <CenteredFlex>
         <Box widths={[2 / 3, 2 / 3, 1 / 3, 1 / 4, 1 / 4]}>
           <RoundImage
@@ -43,7 +42,7 @@ const Profile = () => {
           </CenteredText>
         </Box>
       </CenteredFlex>
-    </Container>
+    </>
   );
 };
 
