@@ -37,5 +37,5 @@ export default styled.div<IProps>`
         : xlg
         ? MediaQuery.maxXLarge + `{${b}}`
         : ""
-      : ""};
+      : "display: block;"};
 `;

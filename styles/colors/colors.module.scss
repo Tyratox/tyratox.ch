@@ -33,6 +33,10 @@ html.dark {
   fill: var(--background-color);
 }
 
+.fill-foreground {
+  fill: var(--foreground-color);
+}
+
 .stroke-background {
   stroke: var(--background-color);
 }

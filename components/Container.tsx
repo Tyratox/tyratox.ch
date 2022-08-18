@@ -6,6 +6,7 @@ const Container = styled.div`
   position: relative;
   margin: 0 auto;
 
+  width: 100%;
   height: 100%;
 
   ${MediaQuery.minSmall} {
