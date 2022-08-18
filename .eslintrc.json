@@ -30,6 +30,7 @@
     "semi": ["error", "always"],
     // we validate all types statically using typescript
     "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
     "import/order": [
       "error", {
         "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"], "type", "object"],

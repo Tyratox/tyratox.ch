@@ -40,12 +40,12 @@ const Education = () => {
     <Container>
       <H2>Education</H2>
       <EducationFlex flexWrap="wrap">
-        <Box widths={[1, 2 / 8, 2 / 8, 8 / 32, 4 / 16]} paddingBottom={0.5}>
+        <Box widths={[1, 2 / 8, 8 / 32, 8 / 32, 4 / 16]} paddingBottom={0.5}>
           2021-
           <wbr />
           2023
         </Box>
-        <Box widths={[1, 5 / 8, 5 / 8, 21 / 32, 11 / 16]} paddingBottom={0.5}>
+        <Box widths={[1, 5 / 8, 21 / 32, 21 / 32, 11 / 16]} paddingBottom={0.5}>
           <Link
             href="https://ethz.ch/en/studies/master/degree-programmes/engineering-sciences/cyber-security.html"
             target="_blank"
@@ -63,19 +63,19 @@ const Education = () => {
           </Link>
         </Box>
         <DownloadBox
-          widths={[1 / 8, 1 / 8, 1 / 8, 3 / 32, 1 / 16]}
+          widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
           <a href="/" download>
             <Download />
           </a>
         </DownloadBox>
-        <Box widths={[1, 2 / 8, 2 / 8, 8 / 32, 4 / 16]} paddingBottom={0.5}>
+        <Box widths={[1, 2 / 8, 8 / 32, 8 / 32, 4 / 16]} paddingBottom={0.5}>
           2018-
           <wbr />
           2021
         </Box>
-        <Box widths={[1, 5 / 8, 5 / 8, 21 / 32, 11 / 16]} paddingBottom={0.5}>
+        <Box widths={[1, 5 / 8, 21 / 32, 21 / 32, 11 / 16]} paddingBottom={0.5}>
           <Link
             href="https://ethz.ch/en/studies/bachelor/bachelors-degree-programmes/engineering-sciences/computer-science.html"
             target="_blank"
@@ -88,7 +88,7 @@ const Education = () => {
           </Link>
         </Box>
         <DownloadBox
-          widths={[1 / 8, 1 / 8, 1 / 8, 3 / 32, 1 / 16]}
+          widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
           <a href="/" download>
