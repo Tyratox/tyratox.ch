@@ -8,6 +8,7 @@ import Box from "./Box";
 import Container from "./Container";
 import Flex from "./Flex";
 import HideMediaQuery from "./HideMediaQuery";
+import ScrollToLink from "./ScrollToLink";
 import Sticky from "./Sticky";
 import VerticalLine from "./VerticalLine";
 
@@ -81,6 +82,18 @@ const Name = ({ stuck }: IProps) => (
   </Flex>
 );
 
+const Menu = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-left: 1rem;
+  }
+`;
+
 const Header = () => {
   return (
     <StickyHeader
@@ -125,7 +138,17 @@ const Header = () => {
                     </Box>
                   </Flex>
                 </AnimatedBox>
-                {stuck && <Box widths={widthsMenu}>menu</Box>}
+                {stuck && (
+                  <Box widths={widthsMenu}>
+                    <Menu>
+                      <ScrollToLink elementId="education">
+                        Education
+                      </ScrollToLink>
+                      <ScrollToLink elementId="projects">Projects</ScrollToLink>
+                      <ScrollToLink elementId="contact">Contact</ScrollToLink>
+                    </Menu>
+                  </Box>
+                )}
               </HeaderElement>
             </Container>
           </HeaderContainer>

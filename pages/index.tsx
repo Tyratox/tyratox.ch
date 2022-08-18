@@ -69,6 +69,7 @@ const Home = () => {
         <HorizontalLine />
         <Education />
         <WireSeperatorMirrored />
+        <div id="projects" />
         <Project mirrored>
           <ProjectContainer>
             <Box widths={[1 / 4, 1 / 5, 1 / 5, 1 / 8, 1 / 8]} paddingRight={2}>
@@ -170,11 +171,9 @@ const Home = () => {
             short I extended VeriMon, a formally verified runtime monitor with
             two additional operators.
           </p>
-          <p>
-            <a href="#" target="_blank">
-              Read abstract
-            </a>
-          </p>
+          <a href="/documents/ba-thesis.pdf" target="_blank">
+            Read thesis
+          </a>
         </Project>
         <WireSeperatorMirrored />
         <Project mirrored>
@@ -191,7 +190,7 @@ const Home = () => {
         </Project>
         <WireSeperator />
         <Project>
-          <h2>Other projects</h2>
+          <h2>Other Projects</h2>
           <Flex flexWrap="wrap" marginX>
             <ProjectBox
               title="ec emmen"
@@ -225,12 +224,12 @@ const Home = () => {
             />
             <ProjectBox
               title="bombug"
-              subtitle="mobile app"
+              subtitle="mobile game"
               href="https://github.com/Tyratox/bombug"
             />
             <ProjectBox
               title="sn4ke"
-              subtitle="mobile app"
+              subtitle="mobile game"
               href="https://github.com/Tyratox/sn4ke"
             />
             <ProjectBox

@@ -1,3 +1,4 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import Image from "next/image";
 import React from "react";
@@ -9,9 +10,28 @@ const CenteredFlex = styled(Flex)`
   justify-content: center;
 `;
 
-const RoundImage = styled(Image)`
+const ImageBorder = styled.div`
   border-radius: 50%;
   border: var(--foreground-color) 0.5rem solid !important;
+`;
+
+const imageAnimation = keyframes`
+  from {
+    filter: hue-rotate(0deg) saturate(100%);
+  }
+
+  50% {
+    filter: hue-rotate(180deg) saturate(200%);
+  }
+
+  to {
+    filter: hue-rotate(360deg) saturate(100%);
+  }
+`;
+
+const RoundImage = styled(Image)`
+  border-radius: 50%;
+  animation: ${imageAnimation} 10s ease-in-out infinite;
 `;
 
 const CenteredText = styled.div`
@@ -26,12 +46,14 @@ const Profile = () => {
     <>
       <CenteredFlex>
         <Box widths={[2 / 3, 2 / 3, 1 / 3, 1 / 4, 1 / 4]}>
-          <RoundImage
-            src={"/images/me.jpg"}
-            width={4000}
-            height={4000}
-            layout="responsive"
-          />
+          <ImageBorder>
+            <RoundImage
+              src={"/images/me.jpg"}
+              width={4000}
+              height={4000}
+              layout="responsive"
+            />
+          </ImageBorder>
         </Box>
       </CenteredFlex>
       <CenteredFlex>
