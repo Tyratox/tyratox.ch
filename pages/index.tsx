@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
+import { FaGithub, FaKeybase, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Parallax } from "react-scroll-parallax";
 
 import BlueprintBegriffen from "../components/blueprints/BlueprintBegriffen";
 import BlueprintHFAG from "../components/blueprints/BlueprintHFAG";
@@ -15,6 +17,8 @@ import Profile from "../components/Profile";
 import Project from "../components/projects/Project";
 import ProjectBox from "../components/projects/ProjectBox";
 import SectionLinks from "../components/SectionLinks";
+import SocialLink from "../components/SocialLink";
+import SocialLinks from "../components/SocialLinks";
 import WireSeperator from "../components/wires/WireSeperator";
 import WireSeperatorMirrored from "../components/wires/WireSeperatorMirrored";
 import Wrapper from "../components/Wrapper";
@@ -73,7 +77,9 @@ const Home = () => {
         <Project mirrored>
           <ProjectContainer>
             <Box widths={[1 / 4, 1 / 5, 1 / 5, 1 / 8, 1 / 8]} paddingRight={2}>
-              <BlueprintNKSA />
+              <Parallax speed={10}>
+                <BlueprintNKSA />
+              </Parallax>
             </Box>
             <Box widths={[1, 1, 4 / 5, 7 / 8, 7 / 8]}>
               <p>
@@ -117,7 +123,9 @@ const Home = () => {
             </Box>
             <Box widths={[0, 0, 1 / 8, 3 / 32, 1 / 16]}>
               <HideMediaQuery md up>
-                <BlueprintBegriffen vertical />
+                <Parallax speed={10}>
+                  <BlueprintBegriffen vertical />
+                </Parallax>
               </HideMediaQuery>
             </Box>
           </ProjectContainer>
@@ -148,7 +156,9 @@ const Home = () => {
         <WireSeperatorMirrored />
         <Project mirrored>
           <Box widths={[1 / 2, 1 / 3, 1 / 3, 1 / 4, 1 / 4]} paddingBottom={2}>
-            <BlueprintHFAG />
+            <Parallax speed={-5}>
+              <BlueprintHFAG />
+            </Parallax>
           </Box>
           <p>
             In 2015 I redesigned the website of my father's company, the Hauser
@@ -161,6 +171,18 @@ const Home = () => {
             system. By leveraging Next.js's static site generation as well as
             Elasticsearch, it was possible to make the website blazingly fast.
           </p>
+          <Flex marginX flexWrap="wrap">
+            <ProjectBox
+              title="online shop"
+              subtitle="website"
+              href="https://shop.feuerschutz.ch/"
+            />
+            <ProjectBox
+              title="homepage"
+              subtitle="website"
+              href="https://feuerschutz.ch/"
+            />
+          </Flex>
         </Project>
         <WireSeperator />
         <Project>
@@ -171,9 +193,18 @@ const Home = () => {
             short I extended VeriMon, a formally verified runtime monitor with
             two additional operators.
           </p>
-          <a href="/documents/ba-thesis.pdf" target="_blank">
-            Read thesis
-          </a>
+          <Flex marginX flexWrap="wrap">
+            <ProjectBox
+              title="thesis"
+              subtitle="pdf"
+              href="/documents/ba-thesis.pdf"
+            />
+            <ProjectBox
+              title="modified code"
+              subtitle="github repo"
+              href="https://github.com/Tyratox/safe-evaluation-of-mfotl-dual-temporal-operators"
+            />
+          </Flex>
         </Project>
         <WireSeperatorMirrored />
         <Project mirrored>
@@ -187,6 +218,13 @@ const Home = () => {
             In addition I started overhauling the user interface to make the
             application easier to use.
           </p>
+          <Flex flexWrap="wrap" marginX>
+            <ProjectBox
+              title="popstellar"
+              subtitle="github repo"
+              href="https://github.com/dedis/popstellar"
+            />
+          </Flex>
         </Project>
         <WireSeperator />
         <Project>
@@ -233,6 +271,21 @@ const Home = () => {
               href="https://github.com/Tyratox/sn4ke"
             />
             <ProjectBox
+              title="gartkus"
+              subtitle="website"
+              href="https://gartkus.ch"
+            />
+            <ProjectBox
+              title="praxis styna"
+              subtitle="website"
+              href="https://praxis-styna.ch/"
+            />
+            <ProjectBox
+              title="praxis ganzxund"
+              subtitle="website"
+              href="https://praxis-ganzxund.ch/"
+            />
+            <ProjectBox
               title="and more ..."
               subtitle="my github repos"
               href="https://github.com/Tyratox?tab=repositories"
@@ -245,6 +298,38 @@ const Home = () => {
           </Flex>
         </Project>
         <HorizontalLine />
+        <div>
+          <SocialLinks>
+            <SocialLink
+              href="https://github.com/tyratox"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub size={64} /> GitHub
+            </SocialLink>
+            <SocialLink
+              href="https://keybase.io/tyratox"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaKeybase size={64} /> Keybase
+            </SocialLink>
+            <SocialLink
+              href="https://www.linkedin.com/in/nico-hauser/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin size={64} /> LinkedIn
+            </SocialLink>
+            <SocialLink
+              href="https://twitter.com/tyratox"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaTwitter size={64} /> Twitter
+            </SocialLink>
+          </SocialLinks>
+        </div>
       </Container>
     </Wrapper>
   );

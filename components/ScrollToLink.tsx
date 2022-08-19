@@ -9,6 +9,12 @@ interface IProps {
 const LinkElement = styled.a`
   display: block;
   cursor: pointer;
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ScrollToLink = ({ elementId, children }: IProps) => {

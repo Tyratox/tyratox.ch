@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import React from "react";
 
+import BlueprintCircle from "./blueprints/BlueprintCircle";
 import Box from "./Box";
 import Flex from "./Flex";
 
@@ -10,9 +11,8 @@ const CenteredFlex = styled(Flex)`
   justify-content: center;
 `;
 
-const ImageBorder = styled.div`
-  border-radius: 50%;
-  border: var(--foreground-color) 0.5rem solid !important;
+const ImageBorder = styled(BlueprintCircle)`
+  position: absolute;
 `;
 
 const imageAnimation = keyframes`
@@ -32,6 +32,8 @@ const imageAnimation = keyframes`
 const RoundImage = styled(Image)`
   border-radius: 50%;
   animation: ${imageAnimation} 10s ease-in-out infinite;
+
+  transform: scale(0.9);
 `;
 
 const CenteredText = styled.div`
@@ -46,21 +48,22 @@ const Profile = () => {
     <>
       <CenteredFlex>
         <Box widths={[2 / 3, 2 / 3, 1 / 3, 1 / 4, 1 / 4]}>
-          <ImageBorder>
+          <div>
+            <ImageBorder />
             <RoundImage
               src={"/images/me.jpg"}
               width={4000}
               height={4000}
               layout="responsive"
             />
-          </ImageBorder>
+          </div>
         </Box>
       </CenteredFlex>
       <CenteredFlex>
         <Box widths={[1, 1, 1, 2 / 3, 1 / 2]}>
           <CenteredText>
-            I am a Cyber Security student at ETHZ & EPFL and will finish my
-            studies in autumn 2023.
+            I am a cyber security student at ethz & epfl and work a lot on
+            web-related projects.
           </CenteredText>
         </Box>
       </CenteredFlex>

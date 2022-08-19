@@ -8,6 +8,7 @@ import Box from "./Box";
 import Container from "./Container";
 import Flex from "./Flex";
 import HideMediaQuery from "./HideMediaQuery";
+import MailToLink from "./MailToLink";
 import ScrollToLink from "./ScrollToLink";
 import Sticky from "./Sticky";
 import VerticalLine from "./VerticalLine";
@@ -89,6 +90,8 @@ const Menu = styled.div`
   justify-content: flex-end;
   flex-wrap: wrap;
 
+  font-size: var(--font-size-large);
+
   & > * {
     margin-left: 1rem;
   }
@@ -141,11 +144,9 @@ const Header = () => {
                 {stuck && (
                   <Box widths={widthsMenu}>
                     <Menu>
-                      <ScrollToLink elementId="education">
-                        Education
-                      </ScrollToLink>
-                      <ScrollToLink elementId="projects">Projects</ScrollToLink>
-                      <ScrollToLink elementId="contact">Contact</ScrollToLink>
+                      <ScrollToLink elementId="education">learn</ScrollToLink>
+                      <ScrollToLink elementId="projects">work</ScrollToLink>
+                      <MailToLink>contact</MailToLink>
                     </Menu>
                   </Box>
                 )}

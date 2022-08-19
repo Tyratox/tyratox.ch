@@ -7,6 +7,7 @@ import BlueprintLaptop from "./blueprints/BlueprintLaptop";
 import Box from "./Box";
 import Flex from "./Flex";
 import HoverBackground from "./HoverBackground";
+import MailToLink from "./MailToLink";
 import ScrollToLink from "./ScrollToLink";
 
 const Sections = styled(Flex)`
@@ -64,12 +65,12 @@ const SectionLinks = () => {
       </SectionLink>
 
       <SectionLink widths={[4 / 5, 3 / 5, 1 / 2, 1 / 3, 1 / 3]}>
-        <ScrollToLink elementId="contact">
+        <MailToLink>
           <SectionImage>
             <HoverBackground />
             <BlueprintContact />
           </SectionImage>
-        </ScrollToLink>
+        </MailToLink>
       </SectionLink>
     </Sections>
   );

@@ -1,5 +1,8 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import React from "react";
+
+import useInView from "../hooks/in-view";
 
 const scaleIn = keyframes`
   from {
@@ -19,7 +22,16 @@ const HorizontalLine = styled.hr<{ width?: number }>`
 
   margin: 2rem 0;
 
-  animation: ${scaleIn} 2s linear forwards;
+  &.in-view {
+    animation: ${scaleIn} 2s linear forwards;
+  }
 `;
 
-export default HorizontalLine;
+const AnimatedHorizontalLine = () => {
+  const ref = React.createRef<SVGSVGElement>();
+  const inView = useInView(ref);
+
+  return <HorizontalLine ref={ref} className={inView ? "in-view" : ""} />;
+};
+
+export default AnimatedHorizontalLine;

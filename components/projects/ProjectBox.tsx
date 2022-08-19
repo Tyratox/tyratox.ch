@@ -15,6 +15,12 @@ const ProjectBoxWrapper = styled(Box)`
 
     color: var(--background-color);
     text-decoration: none;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 

@@ -38,7 +38,7 @@ const DownloadBox = styled(Box)`
 const Education = () => {
   return (
     <Container id="education">
-      <H2>Education</H2>
+      <H2>education</H2>
       <EducationFlex flexWrap="wrap">
         <Box widths={[1, 2 / 8, 8 / 32, 8 / 32, 4 / 16]} paddingBottom={0.5}>
           2021-
@@ -51,15 +51,15 @@ const Education = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Master in Cyber Security
+            master in cyber security
           </Link>
           <br />
           <Link href="https://ethz.ch/en.html" target="_blank">
-            ETHZ
+            ethz
           </Link>
           ,{" "}
           <Link href="https://www.epfl.ch/en/" target="_blank">
-            EPFL
+            epfl
           </Link>
         </Box>
         <DownloadBox
@@ -80,11 +80,11 @@ const Education = () => {
             href="https://ethz.ch/en/studies/bachelor/bachelors-degree-programmes/engineering-sciences/computer-science.html"
             target="_blank"
           >
-            Bachelor in Computer Science
+            bachelor in computer science
           </Link>
           <br />
           <Link href="https://ethz.ch/en.html" target="_blank">
-            ETHZ
+            ethz
           </Link>
         </Box>
         <DownloadBox
@@ -105,11 +105,11 @@ const Education = () => {
             href="https://www.nksa.ch/gymnasium/bildungsweg/#infcom-ch"
             target="_blank"
           >
-            Gymnasium
+            gymnasium
           </Link>
           <br />
           <Link href="https://nksa.ch" target="_blank">
-            NKSA
+            nksa
           </Link>
         </Box>
         <DownloadBox
