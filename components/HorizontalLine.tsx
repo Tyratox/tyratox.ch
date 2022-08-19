@@ -28,7 +28,7 @@ const HorizontalLine = styled.hr<{ width?: number }>`
 `;
 
 const AnimatedHorizontalLine = () => {
-  const ref = React.createRef<SVGSVGElement>();
+  const ref = React.createRef<HTMLHRElement>();
   const inView = useInView(ref);
 
   return <HorizontalLine ref={ref} className={inView ? "in-view" : ""} />;

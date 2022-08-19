@@ -37,7 +37,7 @@ const SectionLink = styled(Box)`
   cursor: pointer;
 
   &:hover {
-    & > div > svg {
+    & > a > div > svg {
       display: block;
     }
   }
