@@ -63,7 +63,7 @@ const WireSeperatorMirrored = () => {
       <g fill="none" fillRule="evenodd">
         <CircleWhite
           cx="13"
-          cy="167 "
+          cy="167"
           r="10"
           className="fill-foreground circle"
         />
