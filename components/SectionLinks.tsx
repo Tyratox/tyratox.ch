@@ -17,10 +17,6 @@ const Sections = styled(Flex)`
   align-items: center;
 
   justify-content: center;
-
-  a {
-    display: block;
-  }
 `;
 
 const SectionImage = styled.div`
@@ -37,7 +33,7 @@ const SectionLink = styled(Box)`
   cursor: pointer;
 
   &:hover {
-    & > a > div > svg {
+    & > div > div > svg {
       display: block;
     }
   }

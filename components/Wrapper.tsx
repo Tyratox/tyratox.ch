@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import Head from "next/head";
 import React from "react";
 
+import { altTextProfilePicture, description, title } from "../data/site";
 import Header from "./Header";
 
 const Body = styled.div`
@@ -13,19 +14,46 @@ export default function Wrapper({ children }) {
   return (
     <div>
       <Head>
-        {/*<link rel="icon" href="/favicon.ico" />
+        <title>{title}</title>
+        <meta name="author" content="Nico Hauser" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="keywords"
+          content="web, development, developer, engineering, computer science, cyber security"
         />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        {/*<meta name="description" content="" />*/}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="theme-color" content="#fff" />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content="/images/me.jpg" />
+        <meta property="og:image:alt" content={altTextProfilePicture} />
+        <meta property="og:description" content={description} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tyratox" />
+        <meta name="twitter:creator" content="@tyratox" />
+
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/favicon/apple-touch-icon.png"
         />
-        <meta name="og:title" content={siteTitle} />
-  <meta name="twitter:card" content="summary_large_image" />*/}
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/images/favicon/site.webmanifest"></link>
       </Head>
       <Header />
       <Body>

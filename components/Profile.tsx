@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import React from "react";
 
+import { altTextProfilePicture, description } from "../data/site";
 import BlueprintCircle from "./blueprints/BlueprintCircle";
 import Box from "./Box";
 import Flex from "./Flex";
@@ -55,16 +56,14 @@ const Profile = () => {
               width={4000}
               height={4000}
               layout="responsive"
+              alt={altTextProfilePicture}
             />
           </div>
         </Box>
       </CenteredFlex>
       <CenteredFlex>
         <Box widths={[1, 1, 1, 2 / 3, 1 / 2]}>
-          <CenteredText>
-            I am a cyber security student at ethz & epfl and work a lot on
-            web-related projects.
-          </CenteredText>
+          <CenteredText>{description}</CenteredText>
         </Box>
       </CenteredFlex>
     </>

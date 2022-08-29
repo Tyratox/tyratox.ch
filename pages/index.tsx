@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaKeybase, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Parallax } from "react-scroll-parallax";
@@ -57,35 +56,6 @@ const Grow = () => {
 const Home = () => {
   return (
     <Wrapper>
-      <Head>
-        <title>Nico Hauser | Developer & Cyber Security Student</title>
-        <meta name="author" content="Nico Hauser" />
-        <meta
-          name="keywords"
-          content="web, development, developer, engineering, computer science, cyber security"
-        />
-        {/*<meta name="description" content="" />*/}
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/images/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/images/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/images/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/images/favicon/site.webmanifest"></link>
-      </Head>
       <Container>
         <div id="above-fold">
           <HorizontalLine />

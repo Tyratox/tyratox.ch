@@ -66,7 +66,11 @@ const Education = () => {
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
-          <a href="/" download>
+          <a
+            href="/"
+            download
+            aria-label="download documents from my master studies"
+          >
             <Download />
           </a>
         </DownloadBox>
@@ -91,7 +95,11 @@ const Education = () => {
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
-          <a href="/" download>
+          <a
+            href="/"
+            download
+            aria-label="download documents from my bachelor studies"
+          >
             <Download />
           </a>
         </DownloadBox>
@@ -117,7 +125,11 @@ const Education = () => {
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
-          <a href="/" download>
+          <a
+            href="/"
+            download
+            aria-label="download documents from my middle school"
+          >
             <Download />
           </a>
         </DownloadBox>
