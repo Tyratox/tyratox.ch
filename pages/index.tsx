@@ -101,7 +101,7 @@ const Home = () => {
                   rel="noreferrer"
                 >
                   Dario Breitenstein
-                </a>
+                </a>{" "}
                 and David Schmid and we started to create small java
                 applications whose purpose was to, for example, synchronously
                 play songs from multiple devices, to offer similar functionality
