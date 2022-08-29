@@ -129,7 +129,7 @@ const BlueprintBook = () => {
           x="82.517"
           y="47.918"
           className="stroke-foreground"
-          stroke-width="5"
+          strokeWidth="5"
           rx="14.171"
         />
         <PathBackground
@@ -138,7 +138,7 @@ const BlueprintBook = () => {
         />
         <PathStrokeBackground
           className="stroke-background"
-          stroke-width="4"
+          strokeWidth="4"
           d="M134.576 146.957v7.578h15.155V139.38h-22.733v22.732h159.128v22.733h-22.733V169.69h15.156v7.577"
         />
       </g>

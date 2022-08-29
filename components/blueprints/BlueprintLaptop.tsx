@@ -136,7 +136,7 @@ const BlueprintLaptop = () => {
           x="81.091"
           y="52.583"
           className="stroke-foreground"
-          stroke-width="3"
+          strokeWidth="3"
           rx="20"
         />
       </g>
