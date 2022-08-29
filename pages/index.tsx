@@ -22,7 +22,6 @@ import SocialLinks from "../components/SocialLinks";
 import WireSeperator from "../components/wires/WireSeperator";
 import WireSeperatorMirrored from "../components/wires/WireSeperatorMirrored";
 import Wrapper from "../components/Wrapper";
-import { siteTitle } from "../data/site";
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -59,7 +58,33 @@ const Home = () => {
   return (
     <Wrapper>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Nico Hauser | Developer & Cyber Security Student</title>
+        <meta name="author" content="Nico Hauser" />
+        <meta
+          name="keywords"
+          content="web, development, developer, engineering, computer science, cyber security"
+        />
+        {/*<meta name="description" content="" />*/}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/images/favicon/site.webmanifest"></link>
       </Head>
       <Container>
         <div id="above-fold">
@@ -96,7 +121,7 @@ const Home = () => {
                   infcom
                 </a>{" "}
                 which consisted of IT / communication modules. More specifically
-                programming, design and even movie making.
+                programming, design and movie making.
               </p>
               <p>
                 I quickly met{" "}
@@ -108,10 +133,10 @@ const Home = () => {
                   Dario Breitenstein
                 </a>
                 and David Schmid and we started to create small java
-                applications whose purpose was for example to synchronously play
-                songs from multiple devices, to offer similar functionality to
-                Apple's Airdrop, to enable chatting within the local network or
-                to send encrypted emails (We definitely did not know how to
+                applications whose purpose was to, for example, synchronously
+                play songs from multiple devices, to offer similar functionality
+                to Apple's Airdrop, to enable chatting within the local network
+                or to send encrypted emails (We definitely did not know how to
                 properly use crypto libraries at that time..) in our spare time.
               </p>
               <p>
@@ -122,17 +147,17 @@ const Home = () => {
                   hexcode
                 </a>{" "}
                 we realized multiple projects for family, teachers and could
-                even take care of the school's website and internal digital
+                even take care of the school's website and the internal digital
                 signage system. In addition we created web applications with
-                purposes such as sharing music between friends or collecting
-                school grades and automatically computing averages as well as
-                showing statistics. A bit we got to know{" "}
+                purposes such as sharing music files between friends or
+                collecting school grades and showing related statistics. At some
+                point we got to know{" "}
                 <a href="https://echolot.io/" target="_blank" rel="noreferrer">
                   Marc Berchtold
-                </a>{" "}
-                a bit better and when Dario got into the adventure room business
-                as a side job, we four worked on several adventure room related
-                it projects.
+                </a>
+                , also a classmate, a bit better and when Dario got into the
+                adventure room business, we four worked on several adventure
+                room related it projects.
               </p>
               <p>
                 This all was during our middle school time (2013-2017). We still
@@ -187,7 +212,7 @@ const Home = () => {
             <Box widths={[1, 1, 7 / 8, 29 / 32, 15 / 16]}>
               <p>
                 In 2014, a year after I started middle school my german teacher
-                Beat Knaus told me about his sideproject "begriffen", an
+                Beat Knaus told me about his side project "begriffen", an
                 e-learning platform he was working on with a previous student,{" "}
                 <a
                   href="https://mzioerjen.ch/"
@@ -310,7 +335,7 @@ const Home = () => {
           <p>
             During spring of 2022 I worked on the "Proof of Personhood" semester
             project at the DEDIS lab at EPFL. It was a project started in an
-            ealier semester by previous students and the goal is to demonstrate
+            earlier semester by previous students and the goal is to demonstrate
             use cases of a proof of personhood. I was part of the e-voting team
             whose primary goal was to add support for secret ballot elections.
             In addition I started overhauling the user interface to make the
