@@ -54,11 +54,11 @@ const Education = () => {
             master in cyber security
           </Link>
           <br />
-          <Link href="https://ethz.ch/en.html" target="_blank">
+          <Link href="https://ethz.ch/en.html" target="_blank" rel="noreferrer">
             ethz
           </Link>
           ,{" "}
-          <Link href="https://www.epfl.ch/en/" target="_blank">
+          <Link href="https://www.epfl.ch/en/" target="_blank" rel="noreferrer">
             epfl
           </Link>
         </Box>
@@ -83,7 +83,7 @@ const Education = () => {
             bachelor in computer science
           </Link>
           <br />
-          <Link href="https://ethz.ch/en.html" target="_blank">
+          <Link href="https://ethz.ch/en.html" target="_blank" rel="noreferrer">
             ethz
           </Link>
         </Box>
@@ -104,11 +104,12 @@ const Education = () => {
           <Link
             href="https://www.nksa.ch/gymnasium/bildungsweg/#infcom-ch"
             target="_blank"
+            rel="noreferrer"
           >
-            gymnasium
+            swiss matura
           </Link>
           <br />
-          <Link href="https://nksa.ch" target="_blank">
+          <Link href="https://nksa.ch" target="_blank" rel="noreferrer">
             nksa
           </Link>
         </Box>

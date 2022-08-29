@@ -5,8 +5,8 @@ import { FaGithub, FaKeybase, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Parallax } from "react-scroll-parallax";
 
 import BlueprintBegriffen from "../components/blueprints/BlueprintBegriffen";
+import BlueprintHexcode from "../components/blueprints/BlueprintHexcode";
 import BlueprintHFAG from "../components/blueprints/BlueprintHFAG";
-import BlueprintNKSA from "../components/blueprints/BlueprintNKSA";
 import Box from "../components/Box";
 import Container from "../components/Container";
 import Education from "../components/Education";
@@ -78,23 +78,102 @@ const Home = () => {
           <ProjectContainer>
             <Box widths={[1 / 4, 1 / 5, 1 / 5, 1 / 8, 1 / 8]} paddingRight={2}>
               <Parallax speed={10}>
-                <BlueprintNKSA />
+                <BlueprintHexcode />
               </Parallax>
             </Box>
             <Box widths={[1, 1, 4 / 5, 7 / 8, 7 / 8]}>
               <p>
-                In 2014, one year after starting at NKSA, I swapped out the CMS
-                of the schools website together with Dario Breitenstein, David
-                Schmid. To do so, we rebuilt the entire frontend (the design
-                should stay the same). This signifanctly simplified the content
-                managment, brought compatibility with the whole WordPress plugin
-                ecosystem and came with custom features.
+                In 2013 I started the gymnasium at{" "}
+                <a href="https://nksa.ch" target="_blank" rel="noreferrer">
+                  NKSA
+                </a>{" "}
+                with the specialization{" "}
+                <a
+                  href="https://www.nksa.ch/gymnasium/bildungsweg/#infcom-ch"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  infcom
+                </a>{" "}
+                which consisted of IT / communication modules. More specifically
+                programming, design and even movie making.
               </p>
               <p>
-                A few years ago, they finally decided to redesign the website as
-                well so our version is no longer online.
+                I quickly met{" "}
+                <a
+                  href="https://www.imakethings.ch/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Dario Breitenstein
+                </a>
+                and David Schmid and we started to create small java
+                applications whose purpose was for example to synchronously play
+                songs from multiple devices, to offer similar functionality to
+                Apple's Airdrop, to enable chatting within the local network or
+                to send encrypted emails (We definitely did not know how to
+                properly use crypto libraries at that time..) in our spare time.
+              </p>
+              <p>
+                Rather quickly we transitioned to designing websites and that at
+                a time where everybody suddenly wanted to have a website. Under
+                the name{" "}
+                <a href="https://hexcode.ch/" target="_blank" rel="noreferrer">
+                  hexcode
+                </a>{" "}
+                we realized multiple projects for family, teachers and could
+                even take care of the school's website and internal digital
+                signage system. In addition we created web applications with
+                purposes such as sharing music between friends or collecting
+                school grades and automatically computing averages as well as
+                showing statistics. A bit we got to know{" "}
+                <a href="https://echolot.io/" target="_blank" rel="noreferrer">
+                  Marc Berchtold
+                </a>{" "}
+                a bit better and when Dario got into the adventure room business
+                as a side job, we four worked on several adventure room related
+                it projects.
+              </p>
+              <p>
+                This all was during our middle school time (2013-2017). We still
+                work on side projects together from time to time and sometimes
+                we participate in hackathons. (I was part of the team the first
+                time in 2019 when we won the swisscom challenge and a second
+                time in 2020 when we were among the finalists.)
               </p>
             </Box>
+            <Flex marginX flexWrap="wrap">
+              <ProjectBox
+                title="keck coaching"
+                subtitle="website"
+                href="https://keckcoaching.ch/"
+              />
+              <ProjectBox
+                title="inmusic"
+                subtitle="website"
+                href="https://inmusic.ch/"
+              />
+              <ProjectBox
+                title="usgang"
+                subtitle="devpost"
+                href="https://devpost.com/software/swissup"
+              />
+              <ProjectBox
+                title="foo(d)bar"
+                subtitle="devpost"
+                href="https://devpost.com/software/foo-d-bar"
+              />
+              <ProjectBox
+                title="jboxxle"
+                subtitle="sokoban game"
+                href="https://github.com/Tyratox/JBoxxle"
+              />
+              <ProjectBox
+                title="and more ..."
+                subtitle="hexcode github repos"
+                href="https://github.com/orgs/hexcodech/repositories?type=all"
+              />
+            </Flex>
           </ProjectContainer>
         </Project>
         <WireSeperator />
@@ -107,14 +186,19 @@ const Home = () => {
             </Box>
             <Box widths={[1, 1, 7 / 8, 29 / 32, 15 / 16]}>
               <p>
-                In the same year (2014) my german teacher Beat Knaus told me
-                about his sideproject "begriffen", an e-learning platform he was
-                working on with a previous student, Michael Ziörjen. This marked
-                the start of several years working on "begriffen" and its
-                successor "wit".
-              </p>
-              <p>
-                (Since the end of 2019 I have not contributed code to either.)
+                In 2014, a year after I started middle school my german teacher
+                Beat Knaus told me about his sideproject "begriffen", an
+                e-learning platform he was working on with a previous student,{" "}
+                <a
+                  href="https://mzioerjen.ch/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Michael Ziörjen
+                </a>
+                . This marked the start of several years working on "begriffen"
+                and its successor "wit". (Since the end of 2019 I have not
+                contributed code to either.)
               </p>
               <p>
                 In the next few years I collaborated several times with Michael
@@ -123,7 +207,7 @@ const Home = () => {
             </Box>
             <Box widths={[0, 0, 1 / 8, 3 / 32, 1 / 16]}>
               <HideMediaQuery md up>
-                <Parallax speed={10}>
+                <Parallax speed={5}>
                   <BlueprintBegriffen vertical />
                 </Parallax>
               </HideMediaQuery>
@@ -162,15 +246,29 @@ const Home = () => {
           </Box>
           <p>
             In 2015 I redesigned the website of my father's company, the Hauser
-            Feuerschutz AG. After another, in 2016 we also decided to create a
-            custom website for the online shop. Up to this point, a shop system
-            provided by a supplier was used. Custom interfaces were added for
-            easier integration into the existing infrastructure. Initially the
-            shop was run on WordPress with the WooCommerce and WPML plugins. In
-            several steps, the shop was then transitioned to a Next.js / vendure
-            system. By leveraging Next.js's static site generation as well as
-            Elasticsearch, it was possible to make the website blazingly fast.
+            Feuerschutz AG. After another year, in 2016 we also decided to
+            create a custom website for the online shop. Up to this point, a
+            shop system provided by a supplier was used. Custom interfaces were
+            added for easier integration into the existing infrastructure.
+            Initially the shop was run on WordPress with the WooCommerce and
+            WPML plugins. In several steps, the shop was then transitioned to a
+            Next.js / vendure system. By leveraging Next.js's static site
+            generation as well as Elasticsearch, it was possible to make the
+            website blazingly fast. I mainly support the online shop, but from
+            time to time I also help out with the rest of the IT infrastructure.
           </p>
+          {/*<p>
+            During the Covid-19 pandemic it took restaurants, bars and clubs
+            quite some time to find or adapt a contact tracing applications
+            where they were required to keep track of visitors. The developed
+            solutions often did not have privacy in mind which was why we
+            developed a simple app that just encodes the legally required
+            information in a qr code that can be scanned. The scanned data is
+            then only kept locally on a device and can be exported as a csv
+            file. No online service required. The solution only stored the
+            necessary data and if there was no incident, the data would not
+            leave the single device.
+                </p>*/}
           <Flex marginX flexWrap="wrap">
             <ProjectBox
               title="online shop"
@@ -231,6 +329,11 @@ const Home = () => {
           <h2>Other Projects</h2>
           <Flex flexWrap="wrap" marginX>
             <ProjectBox
+              title="variaktion"
+              subtitle="website"
+              href="https://variaktion.ch/"
+            />
+            <ProjectBox
               title="ec emmen"
               subtitle="website"
               href="https://ec-emmenbruecke.ch"
@@ -239,16 +342,6 @@ const Home = () => {
               title="taiji aarau"
               subtitle="website"
               href="https://taiji-aarau.ch/"
-            />
-            <ProjectBox
-              title="keck coaching"
-              subtitle="website"
-              href="https://keckcoaching.ch/"
-            />
-            <ProjectBox
-              title="inmusic"
-              subtitle="website"
-              href="https://inmusic.ch/"
             />
             <ProjectBox
               title="ciao"
@@ -271,11 +364,6 @@ const Home = () => {
               href="https://github.com/Tyratox/sn4ke"
             />
             <ProjectBox
-              title="gartkus"
-              subtitle="website"
-              href="https://gartkus.ch"
-            />
-            <ProjectBox
               title="praxis styna"
               subtitle="website"
               href="https://praxis-styna.ch/"
@@ -286,14 +374,14 @@ const Home = () => {
               href="https://praxis-ganzxund.ch/"
             />
             <ProjectBox
+              title="gartkus"
+              subtitle="website"
+              href="https://gartkus.ch"
+            />
+            <ProjectBox
               title="and more ..."
               subtitle="my github repos"
               href="https://github.com/Tyratox?tab=repositories"
-            />
-            <ProjectBox
-              title="and even more ..."
-              subtitle="hexcode github repos"
-              href="https://github.com/orgs/hexcodech/repositories?type=all"
             />
           </Flex>
         </Project>
