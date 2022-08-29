@@ -35,7 +35,7 @@ export default function Wrapper({ children }) {
         <meta name="twitter:site" content="@tyratox" />
         <meta name="twitter:creator" content="@tyratox" />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -53,7 +53,19 @@ export default function Wrapper({ children }) {
           sizes="16x16"
           href="/images/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/images/favicon/site.webmanifest"></link>
+        <link rel="manifest" href="/images/favicon/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/images/favicon/safari-pinned-tab.svg"
+          color="#f5cd79"
+        />
+
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+          name="msapplication-config"
+          content="/images/favicon/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <Header />
       <Body>

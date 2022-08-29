@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
 import React from "react";
 
 import { MediaQuery } from "../styles/media";
@@ -46,33 +45,29 @@ const Education = () => {
           2023
         </Box>
         <Box widths={[1, 5 / 8, 21 / 32, 21 / 32, 11 / 16]} paddingBottom={0.5}>
-          <Link
+          <a
             href="https://ethz.ch/en/studies/master/degree-programmes/engineering-sciences/cyber-security.html"
             target="_blank"
             rel="noreferrer"
           >
             master in cyber security
-          </Link>
+          </a>
           <br />
-          <Link href="https://ethz.ch/en.html" target="_blank" rel="noreferrer">
+          <a href="https://ethz.ch/en.html" target="_blank" rel="noreferrer">
             ethz
-          </Link>
+          </a>
           ,{" "}
-          <Link href="https://www.epfl.ch/en/" target="_blank" rel="noreferrer">
+          <a href="https://www.epfl.ch/en/" target="_blank" rel="noreferrer">
             epfl
-          </Link>
+          </a>
         </Box>
         <DownloadBox
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
-          <a
-            href="/"
-            download
-            aria-label="download documents from my master studies"
-          >
+          {/*<a href="/" aria-label="download documents from my master studies">
             <Download />
-          </a>
+          </a>*/}
         </DownloadBox>
         <Box widths={[1, 2 / 8, 8 / 32, 8 / 32, 4 / 16]} paddingBottom={0.5}>
           2018-
@@ -80,24 +75,25 @@ const Education = () => {
           2021
         </Box>
         <Box widths={[1, 5 / 8, 21 / 32, 21 / 32, 11 / 16]} paddingBottom={0.5}>
-          <Link
+          <a
             href="https://ethz.ch/en/studies/bachelor/bachelors-degree-programmes/engineering-sciences/computer-science.html"
             target="_blank"
+            rel="noreferrer"
           >
             bachelor in computer science
-          </Link>
+          </a>
           <br />
-          <Link href="https://ethz.ch/en.html" target="_blank" rel="noreferrer">
+          <a href="https://ethz.ch/en.html" target="_blank" rel="noreferrer">
             ethz
-          </Link>
+          </a>
         </Box>
         <DownloadBox
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
           <a
-            href="/"
-            download
+            href="/documents/ethz-ba-grades.pdf"
+            target="_blank"
             aria-label="download documents from my bachelor studies"
           >
             <Download />
@@ -109,25 +105,25 @@ const Education = () => {
           2017
         </Box>
         <Box widths={[1, 5 / 8, 21 / 32, 21 / 32, 11 / 16]} paddingBottom={0.5}>
-          <Link
+          <a
             href="https://www.nksa.ch/gymnasium/bildungsweg/#infcom-ch"
             target="_blank"
             rel="noreferrer"
           >
             swiss matura
-          </Link>
+          </a>
           <br />
-          <Link href="https://nksa.ch" target="_blank" rel="noreferrer">
+          <a href="https://nksa.ch" target="_blank" rel="noreferrer">
             nksa
-          </Link>
+          </a>
         </Box>
         <DownloadBox
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
           <a
-            href="/"
-            download
+            href="/documents/nksa-grades.pdf"
+            target="_blank"
             aria-label="download documents from my middle school"
           >
             <Download />
