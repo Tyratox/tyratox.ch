@@ -77,8 +77,18 @@ const Name = ({ stuck }: IProps) => (
       <VerticalLine height={stuck ? 7.5 : 10} />
     </Box>
     <Box widths={[2 / 3, 2 / 3, 2 / 3, 2 / 3, 2 / 3]}>
-      <BlueprintText text="nico hauser" viewBox="0 0 200 40" />
-      <BlueprintText text="@tyratox" viewBox="0 0 200 40" />
+      <BlueprintText
+        text="nico hauser"
+        viewBox="0 0 200 40"
+        width={200}
+        height={40}
+      />
+      <BlueprintText
+        text="@tyratox"
+        viewBox="0 0 200 40"
+        width={200}
+        height={40}
+      />
     </Box>
   </Flex>
 );

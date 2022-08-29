@@ -1,6 +1,9 @@
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import React from "react";
+import { useRef } from "react";
+
+import useSafariAnimationFix from "../../hooks/safari-animation-fix";
 
 const strokeAnimation = keyframes`
   100% {
@@ -22,12 +25,20 @@ const Wrapper = styled.svg`
 `;
 
 const sharedSvgAnimationStyles = css`
-  fill: rgba(255, 255, 255, 0);
   stroke: var(--foreground-color);
   stroke-dasharray: 1500;
   stroke-dashoffset: 1500;
   stroke-linecap: square;
   stroke-linejoin: miter;
+
+  &:not(.animation-ended) {
+    fill: rgba(255, 255, 255, 0);
+  }
+
+  &.animation-ended {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
 `;
 
 const Path = styled.path`
@@ -53,8 +64,19 @@ const CircleStroke = styled.circle`
 `;
 
 const BlueprintLogo = () => {
+  const mainPath = useRef<SVGPathElement>();
+  const moon = useRef<SVGCircleElement>();
+  const earth = useRef<SVGCircleElement>();
+
+  useSafariAnimationFix([mainPath, moon, earth]);
+
   return (
-    <Wrapper xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+    <Wrapper
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 500 500"
+      width="500"
+      height="500"
+    >
       <g fill="none" fillRule="evenodd">
         <CircleStroke
           cx="250"
@@ -72,6 +94,7 @@ const BlueprintLogo = () => {
         />
         <Path
           className="fill-foreground"
+          ref={mainPath}
           d="M450 450 250 250h200v200ZM400 50h50v200h-50V50Zm25 339.559V275H311l114 114.559ZM50 50l200 200H50V50Zm0 200h50v200H50V250Zm25-139.559V225h114L75 110.441Z"
         />
         <g transform="translate(109 10)">
@@ -82,8 +105,14 @@ const BlueprintLogo = () => {
             className="stroke-foreground"
             strokeWidth="3"
           />
-          <Circle cx="41" cy="39" r="19" className="fill-foreground" />
-          <Circle cx="9" cy="15" r="9" className="fill-foreground" />
+          <Circle
+            cx="41"
+            cy="39"
+            r="19"
+            className="fill-foreground"
+            ref={earth}
+          />
+          <Circle cx="9" cy="15" r="9" className="fill-foreground" ref={moon} />
         </g>
       </g>
     </Wrapper>

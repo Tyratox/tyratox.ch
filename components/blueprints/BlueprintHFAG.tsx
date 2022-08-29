@@ -41,6 +41,8 @@ const BlueprintHFAG = () => {
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 250 103"
+      width="250"
+      height="103"
       ref={ref}
       className={inView ? "in-view" : ""}
     >

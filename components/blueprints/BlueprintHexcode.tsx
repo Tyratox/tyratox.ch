@@ -41,6 +41,8 @@ const BlueprintHexcode = () => {
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 253 349"
+      width="253"
+      height="349"
       ref={ref}
       className={inView ? "in-view" : ""}
     >

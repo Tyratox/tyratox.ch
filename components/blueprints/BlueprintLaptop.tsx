@@ -61,7 +61,12 @@ const RectStroke = styled.rect`
 
 const BlueprintLaptop = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 400 400"
+      width="400"
+      height="400"
+    >
       <g fill="none" fillRule="evenodd" transform="translate(-1)">
         <g transform="translate(21.252 236.845)">
           <Rect
