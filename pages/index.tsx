@@ -82,7 +82,7 @@ const Home = () => {
                 <a href="https://nksa.ch" target="_blank" rel="noreferrer">
                   NKSA
                 </a>{" "}
-                with the specialization{" "}
+                with the "akzentfach"{" "}
                 <a
                   href="https://www.nksa.ch/gymnasium/bildungsweg/#infcom-ch"
                   target="_blank"
@@ -110,9 +110,8 @@ const Home = () => {
                 properly use crypto libraries at that time..) in our spare time.
               </p>
               <p>
-                Rather quickly we transitioned to designing websites and that at
-                a time where everybody suddenly wanted to have a website. Under
-                the name{" "}
+                Rather quickly we also started to design websites. Under the
+                name{" "}
                 <a href="https://hexcode.ch/" target="_blank" rel="noreferrer">
                   hexcode
                 </a>{" "}
@@ -181,7 +180,7 @@ const Home = () => {
             </Box>
             <Box widths={[1, 1, 7 / 8, 29 / 32, 15 / 16]}>
               <p>
-                In 2014, a year after I started middle school my german teacher
+                In 2014, a year after I started middle school, my german teacher
                 Beat Knaus told me about his side project "begriffen", an
                 e-learning platform he was working on with a previous student,{" "}
                 <a
@@ -241,16 +240,16 @@ const Home = () => {
           </Box>
           <p>
             In 2015 I redesigned the website of my father's company, the Hauser
-            Feuerschutz AG. After another year, in 2016 we also decided to
-            create a custom website for the online shop. Up to this point, a
-            shop system provided by a supplier was used. Custom interfaces were
-            added for easier integration into the existing infrastructure.
-            Initially the shop was run on WordPress with the WooCommerce and
-            WPML plugins. In several steps, the shop was then transitioned to a
-            Next.js / vendure system. By leveraging Next.js's static site
-            generation as well as Elasticsearch, it was possible to make the
-            website blazingly fast. I mainly support the online shop, but from
-            time to time I also help out with the rest of the IT infrastructure.
+            Feuerschutz AG. After another year, in 2016, we decided to create a
+            custom website for the online shop. Up to this point, a shop system
+            provided by a supplier was used. Custom interfaces were added for
+            easier integration into the existing infrastructure. Initially the
+            shop was run on WordPress with the WooCommerce and WPML plugins. In
+            several steps, the shop was then transitioned to a Next.js / vendure
+            system. By leveraging Next.js's static site generation as well as
+            Elasticsearch, it was possible to make the website blazingly fast. I
+            mainly support the online shop, but I also help out with the rest of
+            the IT infrastructure.
           </p>
           {/*<p>
             During the Covid-19 pandemic it took restaurants, bars and clubs
@@ -283,8 +282,15 @@ const Home = () => {
           <p>
             In 2021 I finished my Bachelor's degree at ETHZ with my Bachelor's
             thesis called "Safe evaluation of MFOTL dual temporal operators". In
-            short I extended VeriMon, a formally verified runtime monitor with
-            two additional operators.
+            short I extended{" "}
+            <a
+              href="https://infsec.ethz.ch/research/projects/mon_enf.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              VeriMon
+            </a>
+            , a formally verified runtime monitor with two additional operators.
           </p>
           <Flex marginX flexWrap="wrap">
             <ProjectBox

@@ -1,0 +1,4 @@
+AuthType Basic 
+AuthName "Authentication is required to access this file"
+AuthUserFile ../../../../.htpasswds/.htpasswd-tyratox.ch
+require valid-user

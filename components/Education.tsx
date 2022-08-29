@@ -92,7 +92,7 @@ const Education = () => {
           paddingBottom={0.5}
         >
           <a
-            href="/documents/ethz-ba-grades.pdf"
+            href="/documents/private/ethz-ba-grades.pdf"
             target="_blank"
             aria-label="download documents from my bachelor studies"
           >
@@ -122,7 +122,7 @@ const Education = () => {
           paddingBottom={0.5}
         >
           <a
-            href="/documents/nksa-grades.pdf"
+            href="/documents/private/nksa-grades.pdf"
             target="_blank"
             aria-label="download documents from my middle school"
           >
