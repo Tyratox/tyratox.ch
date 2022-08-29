@@ -136,39 +136,39 @@ const Home = () => {
                 time in 2019 when we won the swisscom challenge and a second
                 time in 2020 when we were among the finalists.)
               </p>
+              <Flex marginX flexWrap="wrap">
+                <ProjectBox
+                  title="keck coaching"
+                  subtitle="website"
+                  href="https://keckcoaching.ch/"
+                />
+                <ProjectBox
+                  title="inmusic"
+                  subtitle="website"
+                  href="https://inmusic.ch/"
+                />
+                <ProjectBox
+                  title="usgang"
+                  subtitle="devpost"
+                  href="https://devpost.com/software/swissup"
+                />
+                <ProjectBox
+                  title="foo(d)bar"
+                  subtitle="devpost"
+                  href="https://devpost.com/software/foo-d-bar"
+                />
+                <ProjectBox
+                  title="jboxxle"
+                  subtitle="sokoban game"
+                  href="https://github.com/Tyratox/JBoxxle"
+                />
+                <ProjectBox
+                  title="and more ..."
+                  subtitle="hexcode github repos"
+                  href="https://github.com/orgs/hexcodech/repositories?type=all"
+                />
+              </Flex>
             </Box>
-            <Flex marginX flexWrap="wrap">
-              <ProjectBox
-                title="keck coaching"
-                subtitle="website"
-                href="https://keckcoaching.ch/"
-              />
-              <ProjectBox
-                title="inmusic"
-                subtitle="website"
-                href="https://inmusic.ch/"
-              />
-              <ProjectBox
-                title="usgang"
-                subtitle="devpost"
-                href="https://devpost.com/software/swissup"
-              />
-              <ProjectBox
-                title="foo(d)bar"
-                subtitle="devpost"
-                href="https://devpost.com/software/foo-d-bar"
-              />
-              <ProjectBox
-                title="jboxxle"
-                subtitle="sokoban game"
-                href="https://github.com/Tyratox/JBoxxle"
-              />
-              <ProjectBox
-                title="and more ..."
-                subtitle="hexcode github repos"
-                href="https://github.com/orgs/hexcodech/repositories?type=all"
-              />
-            </Flex>
           </ProjectContainer>
         </Project>
         <WireSeperator />
