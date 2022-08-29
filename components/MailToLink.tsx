@@ -5,7 +5,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const LinkElement = styled.a`
+const LinkElement = styled.div`
   display: block;
   cursor: pointer;
 
