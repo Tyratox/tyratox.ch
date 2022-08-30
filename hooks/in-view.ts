@@ -5,12 +5,16 @@ const useInView = (ref: React.RefObject<Element>) => {
 
   useEffect(() => {
     const cachedRef = ref.current;
-    const observer = new IntersectionObserver(
-      ([e]) => setInView((inView) => inView || e.intersectionRatio >= 1),
-      { threshold: [1] }
-    );
-    observer.observe(cachedRef);
-    return () => observer.unobserve(cachedRef);
+    if (!IntersectionObserver) {
+      const observer = new IntersectionObserver(
+        ([e]) => setInView((inView) => inView || e.intersectionRatio >= 1),
+        { threshold: [1] }
+      );
+      observer.observe(cachedRef);
+      return () => observer.unobserve(cachedRef);
+    } else {
+      setInView(true);
+    }
   }, [ref]);
 
   return inView;
