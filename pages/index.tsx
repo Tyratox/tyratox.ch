@@ -17,7 +17,6 @@ import Project from "../components/projects/Project";
 import ProjectBox from "../components/projects/ProjectBox";
 import SectionLinks from "../components/SectionLinks";
 import SocialLink from "../components/SocialLink";
-import SocialLinks from "../components/SocialLinks";
 import WireSeperator from "../components/wires/WireSeperator";
 import WireSeperatorMirrored from "../components/wires/WireSeperatorMirrored";
 import Wrapper from "../components/Wrapper";
@@ -27,6 +26,13 @@ const ProjectContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
+`;
+
+const SocialLinks = styled(Flex)`
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 0 -1rem -1rem;
 `;
 
 const Grow = () => {
@@ -389,34 +395,45 @@ const Home = () => {
         <HorizontalLine />
         <div>
           <SocialLinks>
-            <SocialLink
-              href="https://github.com/tyratox"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub size={64} /> GitHub
-            </SocialLink>
-            <SocialLink
-              href="https://keybase.io/tyratox"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaKeybase size={64} /> Keybase
-            </SocialLink>
-            <SocialLink
-              href="https://www.linkedin.com/in/nico-hauser/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedin size={64} /> LinkedIn
-            </SocialLink>
-            <SocialLink
-              href="https://twitter.com/tyratox"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter size={64} /> Twitter
-            </SocialLink>
+            <Box widths={[1 / 2, 1 / 3, 1 / 4, 1 / 5, 1 / 6]} paddingX={1}>
+              <SocialLink
+                href="https://github.com/tyratox"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub size={64} /> GitHub
+              </SocialLink>
+            </Box>
+            <Box widths={[0, 1 / 3, 0, 0, 0]}></Box>
+            <Box widths={[1 / 2, 1 / 3, 1 / 4, 1 / 5, 1 / 6]} paddingX={1}>
+              <SocialLink
+                href="https://keybase.io/tyratox"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaKeybase size={64} /> Keybase
+              </SocialLink>
+            </Box>
+            <Box widths={[0, 0, 0, 0, 0]}></Box>
+            <Box widths={[1 / 2, 1 / 3, 1 / 4, 1 / 5, 1 / 6]} paddingX={1}>
+              <SocialLink
+                href="https://www.linkedin.com/in/nico-hauser/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin size={64} /> LinkedIn
+              </SocialLink>
+            </Box>
+            <Box widths={[0, 1 / 3, 0, 0, 0]}></Box>
+            <Box widths={[1 / 2, 1 / 3, 1 / 4, 1 / 5, 1 / 6]} paddingX={1}>
+              <SocialLink
+                href="https://twitter.com/tyratox"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaTwitter size={64} /> Twitter
+              </SocialLink>
+            </Box>
           </SocialLinks>
         </div>
       </Container>
