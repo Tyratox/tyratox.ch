@@ -113,6 +113,8 @@ const DarkModeSwitchWrapper = styled.div`
   top: 1rem;
   right: 1rem;
 
+  width: 1.75rem;
+
   z-index: 99999;
 `;
 
