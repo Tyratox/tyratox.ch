@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 import BlueprintLogo from "./blueprints/BlueprintLogo";
 import BlueprintText from "./blueprints/BlueprintText";
@@ -107,7 +108,46 @@ const Menu = styled.div`
   }
 `;
 
+const DarkModeSwitchWrapper = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  z-index: 99999;
+`;
+
 const Header = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const requestsDarkMode =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (requestsDarkMode) {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
+
+    const listener = (event: MediaQueryListEvent) => {
+      setDarkMode(event.matches);
+      if (event.matches) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    };
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", listener);
+
+    return () =>
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", listener);
+  }, []);
+
   return (
     <StickyHeader
       className="sticky-header"
@@ -124,6 +164,21 @@ const Header = () => {
           <HeaderContainer negative={stuck}>
             <Container>
               <HeaderElement>
+                {!stuck && (
+                  <DarkModeSwitchWrapper>
+                    <DarkModeSwitch
+                      checked={darkMode}
+                      sunColor="#fff"
+                      size={30}
+                      onChange={() => {
+                        if (typeof window !== "undefined") {
+                          document.documentElement.classList.toggle("dark");
+                          setDarkMode(!darkMode);
+                        }
+                      }}
+                    />
+                  </DarkModeSwitchWrapper>
+                )}
                 <AnimatedBox
                   widths={widthsLogo}
                   align={stuck ? "left" : "center"}

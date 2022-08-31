@@ -121,12 +121,12 @@ const Home = () => {
                 <a href="https://hexcode.ch/" target="_blank" rel="noreferrer">
                   hexcode
                 </a>{" "}
-                we realized multiple projects for family, teachers and could
-                even take care of the school's website and the internal digital
-                signage system. In addition we created web applications with
-                purposes such as sharing music files between friends or
-                collecting school grades and showing related statistics. At some
-                point we got to know{" "}
+                we realized multiple projects for family, friends and teachers.
+                We could even rework the school's website and create a new
+                internal digital signage system. In addition we created web
+                applications with purposes such as sharing music files between
+                friends or collecting school grades and showing related
+                statistics. At some point we got to know{" "}
                 <a href="https://echolot.io/" target="_blank" rel="noreferrer">
                   Marc Berchtold
                 </a>
@@ -254,7 +254,7 @@ const Home = () => {
             several steps, the shop was then transitioned to a Next.js / vendure
             system. By leveraging Next.js's static site generation as well as
             Elasticsearch, it was possible to make the website blazingly fast. I
-            mainly support the online shop, but I also help out with the rest of
+            mainly support the online shop but I also help out with the rest of
             the IT infrastructure.
           </p>
           {/*<p>

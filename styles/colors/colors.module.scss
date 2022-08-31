@@ -14,13 +14,6 @@ html.dark {
   --foreground-color: #{$foreground-dark};
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    --background-color: #{$background-dark};
-    --foreground-color: #{$foreground-dark};
-  }
-}
-
 :export {
   backgroundLight: $background-light;
   backgroundDark: $background-dark;

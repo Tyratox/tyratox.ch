@@ -5,7 +5,7 @@ const useInView = (ref: React.RefObject<Element>) => {
 
   useEffect(() => {
     const cachedRef = ref.current;
-    if (!IntersectionObserver) {
+    if (IntersectionObserver) {
       const observer = new IntersectionObserver(
         ([e]) => setInView((inView) => inView || e.intersectionRatio >= 1),
         { threshold: [1] }

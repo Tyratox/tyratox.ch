@@ -17,7 +17,7 @@ const useSafariAnimationFix = (refs: React.RefObject<SVGElement>[]) => {
 
     return () =>
       refs.forEach((ref) =>
-        ref.current.removeEventListener("animationend", listener)
+        ref.current?.removeEventListener("animationend", listener)
       );
   }, [refs]);
 };
