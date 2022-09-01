@@ -66,6 +66,7 @@ const BlueprintBegriffen = ({ vertical }: IProps) => {
       width="464"
       height="87"
       ref={ref}
+      className={inView ? "in-view" : ""}
     >
       <Path
         className="fill-foreground path"
