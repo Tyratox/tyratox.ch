@@ -211,7 +211,7 @@ const Header = () => {
                 {stuck && (
                   <Box widths={widthsMenu}>
                     <Menu>
-                      <ScrollToLink elementId="education">learn</ScrollToLink>
+                      <ScrollToLink elementId="education">study</ScrollToLink>
                       <ScrollToLink elementId="projects">work</ScrollToLink>
                       <MailToLink>contact</MailToLink>
                     </Menu>
