@@ -91,13 +91,13 @@ const Education = () => {
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
-          <a
+          {/*<a
             href="/documents/private/ethz-ba-grades.pdf"
             target="_blank"
             aria-label="download documents from my bachelor studies"
           >
             <Download />
-          </a>
+          </a>*/}
         </DownloadBox>
         <Box widths={[1, 2 / 8, 8 / 32, 8 / 32, 4 / 16]} paddingBottom={0.5}>
           2013-
@@ -121,13 +121,13 @@ const Education = () => {
           widths={[1 / 8, 1 / 8, 3 / 32, 3 / 32, 1 / 16]}
           paddingBottom={0.5}
         >
-          <a
+          {/*<a
             href="/documents/private/nksa-grades.pdf"
             target="_blank"
             aria-label="download documents from my middle school"
           >
             <Download />
-          </a>
+          </a>*/}
         </DownloadBox>
       </EducationFlex>
     </Container>
